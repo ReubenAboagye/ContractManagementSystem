@@ -289,6 +289,12 @@
     <Compile Include="User Controls\customer_UserControl.Designer.cs">
       <DependentUpon>customer_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Controls\expense_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\expense_UserControl.Designer.cs">
+      <DependentUpon>expense_UserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\order_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -328,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\customer_UserControl.resx">
       <DependentUpon>customer_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\expense_UserControl.resx">
+      <DependentUpon>expense_UserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\order_UserControl.resx">
       <DependentUpon>order_UserControl.cs</DependentUpon>
