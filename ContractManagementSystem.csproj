@@ -283,6 +283,30 @@
     <Compile Include="User Controls\contract_UserControl.Designer.cs">
       <DependentUpon>contract_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Controls\customer_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\customer_UserControl.Designer.cs">
+      <DependentUpon>customer_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\order_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\order_UserControl.Designer.cs">
+      <DependentUpon>order_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\product_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\product_UserControl.Designer.cs">
+      <DependentUpon>product_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\supplier_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\supplier_UserControl.Designer.cs">
+      <DependentUpon>supplier_UserControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin_Dashboard.resx">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,6 +325,18 @@
     </Compile>
     <EmbeddedResource Include="User Controls\contract_UserControl.resx">
       <DependentUpon>contract_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\customer_UserControl.resx">
+      <DependentUpon>customer_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\order_UserControl.resx">
+      <DependentUpon>order_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\product_UserControl.resx">
+      <DependentUpon>product_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\supplier_UserControl.resx">
+      <DependentUpon>supplier_UserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

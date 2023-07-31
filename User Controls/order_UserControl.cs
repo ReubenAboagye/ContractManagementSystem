@@ -8,25 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace ContractManagementSystem.User_Controls
 {
-    public partial class contract_UserControl : UserControl
+    public partial class order_UserControl : UserControl
     {
-        public contract_UserControl()
+        public order_UserControl()
         {
             InitializeComponent();
         }
 
-        private void New_Contract_Button_Click(object sender, EventArgs e)
+        private void NewOrder_Button_Click(object sender, EventArgs e)
         {
-            Contract_TabPage.SetPage(1);
+            OrderPage.SetPage(1);
         }
 
-        private void Contract_Summary_Button_Click(object sender, EventArgs e)
+        private void GoBack_Order_Click(object sender, EventArgs e)
         {
-            Contract_TabPage.SetPage(0);
+            OrderPage.SetPage(0);
         }
     }
 }

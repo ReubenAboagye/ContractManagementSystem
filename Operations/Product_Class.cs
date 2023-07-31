@@ -9,7 +9,7 @@ namespace ContractManagementSystem.Operations
 {
     internal class Product_Class
     {
-        MySqlConnection connection = null;
+       
 
         bool textNotEmpty(string productName, string productPrice)
         {
