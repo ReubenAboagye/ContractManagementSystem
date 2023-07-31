@@ -61,16 +61,17 @@
             this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.contractPage = new System.Windows.Forms.TabPage();
-            this.orderPage = new System.Windows.Forms.TabPage();
-            this.salesPage = new System.Windows.Forms.TabPage();
-            this.productPage = new System.Windows.Forms.TabPage();
-            this.Supplier_Page = new System.Windows.Forms.TabPage();
             this.contract_UserControl = new ContractManagementSystem.User_Controls.contract_UserControl();
+            this.orderPage = new System.Windows.Forms.TabPage();
             this.order_UserControl1 = new ContractManagementSystem.User_Controls.order_UserControl();
             this.customerPage = new System.Windows.Forms.TabPage();
             this.customer_UserControl1 = new ContractManagementSystem.User_Controls.customer_UserControl();
+            this.salesPage = new System.Windows.Forms.TabPage();
+            this.productPage = new System.Windows.Forms.TabPage();
             this.product_UserControl1 = new ContractManagementSystem.User_Controls.product_UserControl();
+            this.Supplier_Page = new System.Windows.Forms.TabPage();
             this.supplier_UserControl1 = new ContractManagementSystem.User_Controls.supplier_UserControl();
+            this.Expense_Page = new System.Windows.Forms.TabPage();
             this.navBarPanel.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
@@ -82,9 +83,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
             this.contractPage.SuspendLayout();
             this.orderPage.SuspendLayout();
+            this.customerPage.SuspendLayout();
             this.productPage.SuspendLayout();
             this.Supplier_Page.SuspendLayout();
-            this.customerPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // navBarPanel
@@ -276,6 +277,7 @@
             this.Expense_Button.TabIndex = 1;
             this.Expense_Button.TabStop = false;
             this.Expense_Button.Text = "Expenses";
+            this.Expense_Button.Click += new System.EventHandler(this.Expense_Button_Click);
             // 
             // Customers_Button
             // 
@@ -585,14 +587,15 @@
             this.tabPages.Controls.Add(this.salesPage);
             this.tabPages.Controls.Add(this.productPage);
             this.tabPages.Controls.Add(this.Supplier_Page);
+            this.tabPages.Controls.Add(this.Expense_Page);
             this.tabPages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabPages.Location = new System.Drawing.Point(0, 0);
             this.tabPages.Multiline = true;
             this.tabPages.Name = "tabPages";
-            this.tabPages.Page = this.Supplier_Page;
-            this.tabPages.PageIndex = 6;
-            this.tabPages.PageName = "Supplier_Page";
-            this.tabPages.PageTitle = "Supplier";
+            this.tabPages.Page = this.Expense_Page;
+            this.tabPages.PageIndex = 7;
+            this.tabPages.PageName = "Expense_Page";
+            this.tabPages.PageTitle = "Expense";
             this.tabPages.SelectedIndex = 0;
             this.tabPages.Size = new System.Drawing.Size(1364, 819);
             this.tabPages.TabIndex = 0;
@@ -792,6 +795,14 @@
             this.contractPage.Text = "Contracts";
             this.contractPage.UseVisualStyleBackColor = true;
             // 
+            // contract_UserControl
+            // 
+            this.contract_UserControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contract_UserControl.Location = new System.Drawing.Point(3, 3);
+            this.contract_UserControl.Name = "contract_UserControl";
+            this.contract_UserControl.Size = new System.Drawing.Size(1350, 774);
+            this.contract_UserControl.TabIndex = 0;
+            // 
             // orderPage
             // 
             this.orderPage.Controls.Add(this.order_UserControl1);
@@ -802,46 +813,6 @@
             this.orderPage.TabIndex = 2;
             this.orderPage.Text = "Orders";
             this.orderPage.UseVisualStyleBackColor = true;
-            // 
-            // salesPage
-            // 
-            this.salesPage.Location = new System.Drawing.Point(4, 4);
-            this.salesPage.Name = "salesPage";
-            this.salesPage.Padding = new System.Windows.Forms.Padding(3);
-            this.salesPage.Size = new System.Drawing.Size(1356, 780);
-            this.salesPage.TabIndex = 4;
-            this.salesPage.Text = "Sales";
-            this.salesPage.UseVisualStyleBackColor = true;
-            // 
-            // productPage
-            // 
-            this.productPage.Controls.Add(this.product_UserControl1);
-            this.productPage.Location = new System.Drawing.Point(4, 4);
-            this.productPage.Name = "productPage";
-            this.productPage.Padding = new System.Windows.Forms.Padding(3);
-            this.productPage.Size = new System.Drawing.Size(1356, 780);
-            this.productPage.TabIndex = 5;
-            this.productPage.Text = "Products";
-            this.productPage.UseVisualStyleBackColor = true;
-            // 
-            // Supplier_Page
-            // 
-            this.Supplier_Page.Controls.Add(this.supplier_UserControl1);
-            this.Supplier_Page.Location = new System.Drawing.Point(4, 4);
-            this.Supplier_Page.Name = "Supplier_Page";
-            this.Supplier_Page.Padding = new System.Windows.Forms.Padding(3);
-            this.Supplier_Page.Size = new System.Drawing.Size(1356, 780);
-            this.Supplier_Page.TabIndex = 6;
-            this.Supplier_Page.Text = "Supplier";
-            this.Supplier_Page.UseVisualStyleBackColor = true;
-            // 
-            // contract_UserControl
-            // 
-            this.contract_UserControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contract_UserControl.Location = new System.Drawing.Point(3, 3);
-            this.contract_UserControl.Name = "contract_UserControl";
-            this.contract_UserControl.Size = new System.Drawing.Size(1350, 774);
-            this.contract_UserControl.TabIndex = 0;
             // 
             // order_UserControl1
             // 
@@ -870,6 +841,27 @@
             this.customer_UserControl1.Size = new System.Drawing.Size(1350, 774);
             this.customer_UserControl1.TabIndex = 0;
             // 
+            // salesPage
+            // 
+            this.salesPage.Location = new System.Drawing.Point(4, 4);
+            this.salesPage.Name = "salesPage";
+            this.salesPage.Padding = new System.Windows.Forms.Padding(3);
+            this.salesPage.Size = new System.Drawing.Size(1356, 780);
+            this.salesPage.TabIndex = 4;
+            this.salesPage.Text = "Sales";
+            this.salesPage.UseVisualStyleBackColor = true;
+            // 
+            // productPage
+            // 
+            this.productPage.Controls.Add(this.product_UserControl1);
+            this.productPage.Location = new System.Drawing.Point(4, 4);
+            this.productPage.Name = "productPage";
+            this.productPage.Padding = new System.Windows.Forms.Padding(3);
+            this.productPage.Size = new System.Drawing.Size(1356, 780);
+            this.productPage.TabIndex = 5;
+            this.productPage.Text = "Products";
+            this.productPage.UseVisualStyleBackColor = true;
+            // 
             // product_UserControl1
             // 
             this.product_UserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -878,6 +870,17 @@
             this.product_UserControl1.Size = new System.Drawing.Size(1350, 774);
             this.product_UserControl1.TabIndex = 0;
             // 
+            // Supplier_Page
+            // 
+            this.Supplier_Page.Controls.Add(this.supplier_UserControl1);
+            this.Supplier_Page.Location = new System.Drawing.Point(4, 4);
+            this.Supplier_Page.Name = "Supplier_Page";
+            this.Supplier_Page.Padding = new System.Windows.Forms.Padding(3);
+            this.Supplier_Page.Size = new System.Drawing.Size(1356, 780);
+            this.Supplier_Page.TabIndex = 6;
+            this.Supplier_Page.Text = "Supplier";
+            this.Supplier_Page.UseVisualStyleBackColor = true;
+            // 
             // supplier_UserControl1
             // 
             this.supplier_UserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -885,6 +888,16 @@
             this.supplier_UserControl1.Name = "supplier_UserControl1";
             this.supplier_UserControl1.Size = new System.Drawing.Size(1350, 774);
             this.supplier_UserControl1.TabIndex = 0;
+            // 
+            // Expense_Page
+            // 
+            this.Expense_Page.Location = new System.Drawing.Point(4, 4);
+            this.Expense_Page.Name = "Expense_Page";
+            this.Expense_Page.Padding = new System.Windows.Forms.Padding(3);
+            this.Expense_Page.Size = new System.Drawing.Size(1356, 780);
+            this.Expense_Page.TabIndex = 7;
+            this.Expense_Page.Text = "Expense";
+            this.Expense_Page.UseVisualStyleBackColor = true;
             // 
             // Admin_Dashboard
             // 
@@ -914,9 +927,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
             this.contractPage.ResumeLayout(false);
             this.orderPage.ResumeLayout(false);
+            this.customerPage.ResumeLayout(false);
             this.productPage.ResumeLayout(false);
             this.Supplier_Page.ResumeLayout(false);
-            this.customerPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -964,5 +977,6 @@
         private User_Controls.customer_UserControl customer_UserControl1;
         private User_Controls.product_UserControl product_UserControl1;
         private User_Controls.supplier_UserControl supplier_UserControl1;
+        private System.Windows.Forms.TabPage Expense_Page;
     }
 }

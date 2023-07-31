@@ -123,11 +123,14 @@ namespace ContractManagementSystem
             
         }
 
-        
-
         private void Supplier_Button_Click(object sender, EventArgs e)
         {
             tabPages.SetPage("Supplier");
+        }
+
+        private void Expense_Button_Click(object sender, EventArgs e)
+        {
+            tabPages.SetPage("Expense");
         }
     }
 }
