@@ -13,7 +13,7 @@ namespace ContractManagementSystem.Classes
 
        public void connector()
         {
-            var connectionString = "server=db4free.net;user=gaayan23;password=123Gaayan45?;database=gaayanenterprise";
+            var connectionString = "";
             var databaseConnection = new DatabaseConnection(connectionString);
         }
 
