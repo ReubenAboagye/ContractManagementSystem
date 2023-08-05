@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,13 @@ namespace ContractManagementSystem.User_Controls
         private void AddProduct_Button_Click(object sender, EventArgs e)
         {
             Product_Page.SetPage(1);
+        }
+
+        private void Add_Button_Click(object sender, EventArgs e)
+        {
+            MySqlConnection mySqlConnection = new MySqlConnection("server=localhost; port=3306; username=root; password=!Won2Develop?; database=gaayanenterprise");
+            mySqlConnection.Open();
+
         }
     }
 }

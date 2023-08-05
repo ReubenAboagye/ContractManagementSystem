@@ -187,10 +187,11 @@
             this.Customer_Summary_page.Location = new System.Drawing.Point(4, 4);
             this.Customer_Summary_page.Name = "Customer_Summary_page";
             this.Customer_Summary_page.Padding = new System.Windows.Forms.Padding(3);
-            this.Customer_Summary_page.Size = new System.Drawing.Size(1334, 692);
+            this.Customer_Summary_page.Size = new System.Drawing.Size(1348, 754);
             this.Customer_Summary_page.TabIndex = 0;
             this.Customer_Summary_page.Text = "Customer Summary";
             this.Customer_Summary_page.UseVisualStyleBackColor = true;
+            this.Customer_Summary_page.Click += new System.EventHandler(this.Customer_Summary_page_Click);
             // 
             // Summary_DataGridView
             // 
@@ -939,6 +940,7 @@
             this.Add_Button.TabIndex = 6;
             this.Add_Button.Text = "Add Record";
             this.Add_Button.TextOffset = new System.Drawing.Point(8, 1);
+            this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
             // 
             // Update_Button
             // 

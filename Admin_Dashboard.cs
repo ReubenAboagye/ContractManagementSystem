@@ -132,6 +132,16 @@ namespace ContractManagementSystem
         {
             tabPages.SetPage("Expense");
         }
+
+        private void contract_UserControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Settings_Button_Click(object sender, EventArgs e)
+        {
+            tabPages.SetPage("Settings");
+        }
     }
 }
 

@@ -1,13 +1,3 @@
-USE gaayanenterprise;
-
--- creating a user table
-CREATE TABLE users(
-user_id INT AUTO_INCREMENT PRIMARY KEY,
-username VARCHAR(20) NOT NULL,
-salt VARCHAR(64) NOT NULL,
-hashed_password VARCHAR(64) NOT NULL
-);
-
 -- stored procedure for inserting into users table
 DELIMITER //
 CREATE PROCEDURE insert_user(IN p_username VARCHAR(20), IN p_salt VARCHAR(64), IN p_hashed_password VARCHAR(64))
@@ -47,19 +37,6 @@ BEGIN
 END //
 DELIMITER ;
 
--- *************************************************
- select username from users;
- USE gaayanenterprise;
- 
- -- CREATING EMPLOYEE TABLE
-	CREATE TABLE Employee(
-    emp_id INT AUTO_INCREMENT PRIMARY KEY,
-    emp_name VARCHAR(50) NOT NULL,
-    emp_address VARCHAR(20) NOT NULL,
-    emp_position VARCHAR(25) DEFAULT "Employee",
-    department VARCHAR(30)
-    );
-    
 -- stored procedure for deleting into employee table
 DELIMITER //
 CREATE PROCEDURE delete_employee(IN p_id INT)
@@ -69,7 +46,8 @@ BEGIN
 END //
 DELIMITER ;
 
--- creating procedure for inserting employee
+-- creating procedure for inserting em
+ployee
 DELIMITER //
 CREATE PROCEDURE insert_employee(IN p_name VARCHAR(50), IN p_address VARCHAR(20), IN p_position VARCHAR(25), IN p_department VARCHAR(30))
 BEGIN
@@ -80,6 +58,7 @@ DELIMITER ;
 
 
 -- creating procedure for updating employee
+DELIMITER //
 CREATE PROCEDURE update_employee(IN p_id INT, IN p_name VARCHAR(50), IN p_address VARCHAR(20), IN p_position VARCHAR(25), IN p_department VARCHAR(30))
 BEGIN
     UPDATE  Employee
@@ -87,6 +66,16 @@ BEGIN
 		emp_address = p_address, 
         emp_position = p_position, 
         department = p_department
-    WHERE emp_id = p_id 
+    WHERE emp_id = p_id;
 END //
 DELIMITER ;
+
+-- SELECTING RECORDS BY USERNAME
+DELIMITER //
+CREATE PROCEDURE select_employee(IN p_id VARCHAR(20))
+BEGIN
+    SELECT * FROM Employee
+    WHERE emp_id = p_id;
+END //
+DELIMITER ;
+

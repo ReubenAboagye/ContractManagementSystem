@@ -142,10 +142,10 @@
             this.SupplierPage.Location = new System.Drawing.Point(0, 0);
             this.SupplierPage.Multiline = true;
             this.SupplierPage.Name = "SupplierPage";
-            this.SupplierPage.Page = this.Supplier_Summary_Page;
-            this.SupplierPage.PageIndex = 0;
-            this.SupplierPage.PageName = "Supplier_Summary_Page";
-            this.SupplierPage.PageTitle = "Supplier Summary";
+            this.SupplierPage.Page = this.Add_Supplier_Page;
+            this.SupplierPage.PageIndex = 1;
+            this.SupplierPage.PageName = "Add_Supplier_Page";
+            this.SupplierPage.PageTitle = "New Supplier";
             this.SupplierPage.SelectedIndex = 0;
             this.SupplierPage.Size = new System.Drawing.Size(1356, 780);
             this.SupplierPage.TabIndex = 1;
@@ -925,6 +925,7 @@
             this.AddRecord_Button.TabIndex = 7;
             this.AddRecord_Button.Text = "Add Record";
             this.AddRecord_Button.TextOffset = new System.Drawing.Point(8, 1);
+            this.AddRecord_Button.Click += new System.EventHandler(this.AddRecord_Button_Click);
             // 
             // UpdateRecord_Button
             // 

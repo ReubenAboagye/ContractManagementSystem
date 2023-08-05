@@ -17,10 +17,10 @@ namespace ContractManagementSystem
 {
     public partial class Login_Form : Form
     {
-        readonly string server = "db4free.net";
+        readonly string server = "localhost";
         readonly int port = 3306;
-        string username = "gaayan23";
-        string password = "123Gaayan45?";
+        string username = "root";
+        string password = "!Won2Develop?";
         readonly string database = "gaayanenterprise";
 
         public Login_Form()

@@ -11,9 +11,14 @@ namespace ContractManagementSystem.Classes
     {
         private string _connectionString;
 
+        MySqlConnection con = new MySqlConnection();
        public void connector()
         {
-            var connectionString = "";
+
+            
+
+            var connectionString = "server=localhost;user=root;password=!Won2Develop?;database=gaayanenterprise";
+
             var databaseConnection = new DatabaseConnection(connectionString);
         }
 
